@@ -3,7 +3,7 @@ package com.jspiders.object;
 class Demo extends Object {
     @Override
     public int hashCode(){
-       int v1 = 100;
+       int v1 = 100 + 50;
        return v1;
     }
 
