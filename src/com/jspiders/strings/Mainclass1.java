@@ -15,6 +15,11 @@ public class Mainclass1 {
         String str1 = s1.toString();
         System.out.println(str1);
 
+        boolean res = s1.equals(s2);
+        System.out.println(res);
+
+        boolean res2 = s1 == s2;
+        System.out.println(res2);
 
     }
 }
