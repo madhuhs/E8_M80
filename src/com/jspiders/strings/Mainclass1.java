@@ -2,24 +2,22 @@ package com.jspiders.strings;
 
 public class Mainclass1 {
     public static void main(String[] args) {
-        //Using new keyword
-        String s1 = new String("hello");
-        //Without using new keyword
-        String s2 = "hello";
+        StringBuffer sb1 = new StringBuffer("hello");
+        StringBuffer sb2 = new StringBuffer("hello");
 
-        int h1 = s1.hashCode();
+        int h1 = sb1.hashCode();
+        int h2 = sb2.hashCode();
         System.out.println("h1 : "+h1);
-        int h2 = s2.hashCode();
         System.out.println("h2 : "+h2);
 
-        String str1 = s1.toString();
-        System.out.println(str1);
+        String str1 = sb1.toString();
+        String str2 = sb2.toString();
+        System.out.println("str1 : "+str1);
+        System.out.println("str2 : "+str2);
 
-        boolean res = s1.equals(s2);
-        System.out.println(res);
+        boolean res = sb1.equals(sb2);
+        System.out.println("res : "+res);
 
-        boolean res2 = s1 == s2;
-        System.out.println(res2);
-
+        sb1 = sb1.append("hello");
     }
 }
