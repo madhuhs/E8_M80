@@ -3,10 +3,15 @@ package com.jspiders.exceptions;
 import java.util.Scanner;
 
 public class Mainclass {
-
-    public static void test(int num1,int num2){
-        int res = num1 / num2;
-        System.out.println("res : "+res);
+    public static void test(int num1,int num2) throws IllegalArgumentException
+    {
+           if(num2==0){
+               IllegalArgumentException i1 =
+                       new IllegalArgumentException("invalid input : "+num2);
+               throw i1;
+           }
+           int res = num1 / num2;
+           System.out.println("res : "+res);
     }
 
     public static void main(String[] args) {
@@ -16,7 +21,12 @@ public class Mainclass {
         int num1 = sc.nextInt();
         System.out.println("Enter input 2");
         int num2 = sc.nextInt();
-        test(num1,num2);
+        try {
+            test(num1, num2);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
         System.out.println("Program ends...");
     }
 }
