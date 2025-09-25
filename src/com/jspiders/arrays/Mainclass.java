@@ -1,5 +1,6 @@
 package com.jspiders.arrays;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //DTO(Data Transfer Object)
@@ -114,3 +115,41 @@ class StudentService
         }
     }
 }
+
+class StudentService2
+{
+    private ArrayList<Student> a1 = new ArrayList<Student>();
+
+    public void addStudent(Student student){
+            a1.add(student); //students[currentIndex] = student;
+            System.out.println("Student added");
+
+    }
+
+    //prints the student data in given index
+    public void getStudent(int index){
+        if(index >= 0 && index<=students.length-1
+                && students[index]!=null){
+            System.out.println("Name  : "+students[index].getName());
+            System.out.println("Marks : "+students[index].getMarks());
+            System.out.println("Roll No :"+students[index].getRollNo());
+        }
+        else {
+            System.out.println("Invalid index");
+        }
+    }
+
+    public void updateStudentName(int index,String newName){
+        if(index >=0 && index<=students.length-1 && students[index]!=null ) {
+            students[index].setName(newName);
+        }
+    }
+
+    public void deleteStudent(int index){
+        if(index >=0 && index<=students.length-1){
+            students[index]=null;
+        }
+    }
+}
+
+
