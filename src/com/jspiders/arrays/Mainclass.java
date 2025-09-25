@@ -1,5 +1,7 @@
 package com.jspiders.arrays;
 
+import java.util.Scanner;
+
 //DTO(Data Transfer Object)
 class Student {
     private String name;
@@ -55,12 +57,15 @@ public class Mainclass {
 
          StudentService sv = new StudentService();
         Student s1 = new Student();
-        s1.setName("S1");
+        Scanner  sc = new Scanner(System.in);
+        System.out.println("Enter student name:");
+        s1.setName(sc.next());
         s1.setMarks(50);
         s1.setRollNo(1);
 
-        sv.addStudent(s1);
-        sv.getStudent(100);
+       // sv.addStudent(s1);
+        sv.getStudent(0);
+
 
 
         System.out.println("Program ends...");
@@ -86,13 +91,26 @@ class StudentService
 
     //prints the student data in given index
     public void getStudent(int index){
-        if(index >= 0 && index<=students.length-1){
+        if(index >= 0 && index<=students.length-1
+                && students[index]!=null){
             System.out.println("Name  : "+students[index].getName());
         System.out.println("Marks : "+students[index].getMarks());
         System.out.println("Roll No :"+students[index].getRollNo());
         }
         else {
             System.out.println("Invalid index");
+        }
+    }
+
+    public void updateStudentName(int index,String newName){
+        if(index >=0 && index<=students.length-1 && students[index]!=null ) {
+            students[index].setName(newName);
+        }
+    }
+
+    public void deleteStudent(int index){
+        if(index >=0 && index<=students.length-1){
+            students[index]=null;
         }
     }
 }
