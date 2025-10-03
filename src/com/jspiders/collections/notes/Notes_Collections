@@ -331,3 +331,144 @@
           constructor of TreeSet.
 
     -----------------------------------------------------------------------------
+
+    Queue
+       * Queue stores duplicates.
+       * Queue has index.
+       * Queue support to store multiple null values.
+       * Queue do preserve insertion order.
+
+
+        Priority Queue
+
+       * Priority Queue store duplicates.
+       * Priority Queue do not have index.
+       * Priority Queue do not support to store null values (not even one null).
+         if you try to add null value then JVM throws NullPointerException
+
+       * Priority Queue do not preserve insertion order.
+       * Priority Queue do not allow heterogeneous data.
+
+       * Underlying DS of Priority Queue is Priority Heap.
+       * Data from Priority Queue is retrieved using poll().
+
+       * poll() : Retrieves and removes the head element of the queue
+
+        Constructors of Priority Queue
+
+        PriorityQueue()
+        Creates a PriorityQueue with the
+        default initial capacity (11) that orders
+        its elements according to their natural ordering.
+
+        PriorityQueue(Comparator comparator)
+        Creates a PriorityQueue with the default initial capacity
+        and whose elements are ordered according to the specified comparator.
+
+        PriorityQueue(int initialCapacity)
+        Creates a PriorityQueue with the specified initial capacity
+        that orders its elements according to their natural ordering.
+
+        PriorityQueue(int initialCapacity, Comparator comparator)
+        Creates a PriorityQueue with the specified initial capacity
+        that orders its elements according to the specified comparator.
+
+
+        * Only Objects of those classes which are implementing Comparable Interface
+          and Overriding compareTo() can be added to PriorityQueue.
+
+        * If you create a PriorityQueue object by using PriorityQueue() then
+          elements sorted according to the natural ordering depending
+          on compareTo() present in the class.
+
+        * If you create a PriorityQueue object by using PriorityQueue(Comparator comp) then
+          elements sorted according to the customized ordering depending
+          on compare() present in the programmer define class.
+
+
+   HashTable :
+   * Do not allow null VALUE
+   * Do not allow null KEYS
+
+   HashMap
+
+   * HashMap do not store duplicate keys.
+   * If you try to add a New value with Old Key then,
+     the old value will be updated with the new value for the given key.
+   * HashMap stores duplicate value.
+   * HashMap do not have index.
+   * KEY and VALUE are added to HashMap using put(key,value);
+   * Value from HashMap is retrieved using get(key).
+   * If the given key is invalid or not present in HashMap then it return NULL
+   * Only one key can be Null.
+   * Values in HashMap can be Null.
+   * HashMap do not preserve insertion order.
+   * Underlying DS of HashMap is HashTable.
+
+
+
+    LinkedHashMap
+
+   * LinkedHashMap do not store duplicate keys.
+   * LinkedHashMap stores duplicate value.
+   * LinkedHashMap do not have index.
+   * KEY and VALUE are added to LinkedHashMap using put(key,value);
+   * Value from LinkedHashMap is retrieved using get(key).
+   * If you try to add a New value with Old Key then,
+     the old value will be replaced with the new value for the given key.
+   * Only one key can be Null.
+   * Values in LinkedHashMap can be Null.
+   * LinkedHashMap do PRESERVE the insertion order.
+   * Underlying DS of LinkedHashMap are LinkedList and HashTable.
+
+
+
+
+    TreeMap
+
+   * TreeMap do not store duplicate keys.
+   * TreeMap stores duplicate value.
+   * TreeMap do not have index.
+   * KEY and VALUE are added to TreeMap using put(key,value);
+   * Value from TreeMap is retrieved using get(key).
+   * If you try to add a New value with Old Key then,
+     the old value will be replaced with the new value for the given key.
+   * NOT EVEN one key can be Null.
+   * Values in TreeMap can be Null.
+   * TreeMap DO NOT PRESERVE the insertion order.
+   * Underlying DS of TreeMap are Binary Search Tree.
+
+   * The values in TreeMap are sorted according to Keys.
+   * The keys in TreeMap should be object of a class that implements
+     Comparable Interface and Override compareTo().
+   * The keys in TreeMap should be Homogeneous.
+   * The values in TreeMap can be be Heterogeneous.
+
+   Generics
+
+   * Generics are used to achieve two goals
+     1.Making the given collection Type Safe.
+     2.To avoid Unwanted down casting.
+
+    * generics are declared with Collection Decleartion
+    * generics should be always written within angular brackets.
+
+     Syntax : CollectionName<Type> ref = new CollectionName<Type>();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
