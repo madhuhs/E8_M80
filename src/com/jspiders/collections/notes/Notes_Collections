@@ -448,6 +448,7 @@
 
    * Generics are used to achieve two goals
      1.Making the given collection Type Safe.
+      -> Allows only one type of data to be stored (Homogenous)
      2.To avoid Unwanted down casting.
 
     * generics are declared with Collection Decleartion
